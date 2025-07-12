@@ -109,6 +109,8 @@ section p {
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
     user-select: none;
+    position: relative;
+    z-index: 1003;
 }
 
 .menu button:hover {
@@ -120,6 +122,28 @@ section p {
 .menu button:active {
     background: #333;
     color: #fff;
+    transform: scale(0.95);
+}
+
+/* Melhorias para mobile */
+@media (max-width: 768px) {
+    .menu button {
+        min-width: 80px;
+        padding: 0.5rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+    .menu button:active {
+        transform: scale(0.9);
+    }
+}
+
+@media (max-width: 480px) {
+    .menu button {
+        min-width: 70px;
+        padding: 0.4rem 0.6rem;
+        font-size: 0.75rem;
+    }
 }
 
 /* Footer */
@@ -206,6 +230,7 @@ footer p {
         gap: 0.3rem;
         flex-wrap: wrap;
         pointer-events: auto;
+        z-index: 1002;
     }
     
     .menu button {
@@ -216,6 +241,9 @@ footer p {
         -webkit-tap-highlight-color: transparent;
         touch-action: manipulation;
         user-select: none;
+        cursor: pointer;
+        position: relative;
+        z-index: 1003;
     }
     
     /* Modal responsivo */
@@ -282,6 +310,10 @@ footer p {
     /* Menu para telas muito pequenas */
     .menu {
         position: absolute;
+        top: 0.2rem;
+        right: 0.3rem;
+        gap: 0.2rem;
+        z-index: 1002;
         flex-direction: column;
         align-items: flex-end;
         right: 0.3rem;
@@ -462,7 +494,7 @@ html {
 .modal {
     display: none;
     position: fixed;
-    z-index: 2000;
+    z-index: 10000;
     left: 0;
     top: 0;
     width: 100%;
@@ -482,6 +514,8 @@ html {
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     animation: slideIn 0.3s ease-out;
+    position: relative;
+    z-index: 10001;
 }
 
 @keyframes slideIn {
