@@ -10,7 +10,7 @@
     </head>
     <body>
         <header>
-            <h1 class= ".h1"> Bem-vindo ao TTE!</h1>
+            <h1>Bem-vindo ao TTE!</h1>
             <h2>TTE - Tirando Top De Enoque</h2>
         </header>
         <main>
@@ -230,18 +230,234 @@
                     
                     <p><strong>Junte-se ao TTE e descubra o poder transformador da educação!</strong></p>
                 </div>
+
+
+
+                <!-- Calendário de Eventos -->
+                <div class="tte-calendario">
+                    <h2>📅 Calendário de Eventos TTE</h2>
+                    <p>Participe dos nossos eventos especiais, workshops gratuitos e encontros que transformam vidas!</p>
+                    
+                    <div class="eventos-grid">
+                        <div class="evento-card">
+                            <div class="evento-data">
+                                <span class="evento-dia">15</span>
+                                <span class="evento-mes">MAR</span>
+                            </div>
+                            <div class="evento-info">
+                                <h3>🎯 Workshop: Autoconhecimento e Propósito</h3>
+                                <p class="evento-descricao">Descubra seus valores e defina seu propósito de vida neste workshop gratuito.</p>
+                                <div class="evento-detalhes">
+                                    <span class="evento-horario">⏰ 14:00 - 17:00</span>
+                                    <span class="evento-local">📍 TTE - Sala Principal</span>
+                                    <span class="evento-vagas">👥 Vagas Limitadas</span>
+                                </div>
+                                <button class="btn-inscrever" onclick="inscreverEvento('workshop-autoconhecimento')">Inscrever-se Grátis</button>
+                            </div>
+                        </div>
+                        
+                        <div class="evento-card">
+                            <div class="evento-data">
+                                <span class="evento-dia">22</span>
+                                <span class="evento-mes">MAR</span>
+                            </div>
+                            <div class="evento-info">
+                                <h3>💼 Palestra: Inteligência Emocional no Trabalho</h3>
+                                <p class="evento-descricao">Aprenda técnicas práticas para desenvolver sua inteligência emocional.</p>
+                                <div class="evento-detalhes">
+                                    <span class="evento-horario">⏰ 19:00 - 21:00</span>
+                                    <span class="evento-local">📍 TTE - Auditório</span>
+                                    <span class="evento-vagas">👥 50 Vagas</span>
+                                </div>
+                                <button class="btn-inscrever" onclick="inscreverEvento('palestra-inteligencia-emocional')">Inscrever-se Grátis</button>
+                            </div>
+                        </div>
+                        
+                        <div class="evento-card">
+                            <div class="evento-data">
+                                <span class="evento-dia">29</span>
+                                <span class="evento-mes">MAR</span>
+                            </div>
+                            <div class="evento-info">
+                                <h3>🤝 Networking: Encontro de Ex-Alunos</h3>
+                                <p class="evento-descricao">Conecte-se com profissionais que passaram pelo TTE e transformaram suas carreiras.</p>
+                                <div class="evento-detalhes">
+                                    <span class="evento-horario">⏰ 18:00 - 21:00</span>
+                                    <span class="evento-local">📍 TTE - Espaço de Eventos</span>
+                                    <span class="evento-vagas">👥 Aberto ao Público</span>
+                                </div>
+                                <button class="btn-inscrever" onclick="inscreverEvento('networking-ex-alunos')">Participar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Conquistas e Certificações -->
+                <div class="tte-conquistas">
+                    <h2>🏆 Conquistas e Reconhecimentos</h2>
+                    <p>O TTE é reconhecido por sua excelência e compromisso com a transformação educacional.</p>
+                    
+                    <div class="conquistas-grid">
+                        <div class="conquista-card">
+                            <div class="conquista-icon">🏅</div>
+                            <h3>Prêmio Excelência Educacional 2024</h3>
+                            <p>Reconhecimento pela inovação em metodologias de ensino e desenvolvimento pessoal.</p>
+                        </div>
+                        
+                        <div class="conquista-card">
+                            <div class="conquista-icon">⭐</div>
+                            <h3>4.9/5 Avaliação dos Alunos</h3>
+                            <p>Nota média de satisfação dos nossos alunos com a qualidade dos cursos.</p>
+                        </div>
+                        
+                        <div class="conquista-card">
+                            <div class="conquista-icon">🤝</div>
+                            <h3>Parceria com Google for Education</h3>
+                            <p>Certificação oficial para oferecer cursos com ferramentas Google.</p>
+                        </div>
+                        
+                        <div class="conquista-card">
+                            <div class="conquista-icon">📈</div>
+                            <h3>95% de Empregabilidade</h3>
+                            <p>Taxa de alunos que conseguem emprego na área estudada em até 6 meses.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+                <!-- Teste de Perfil -->
+                <div class="tte-teste">
+                    <h2>🎯 Descubra Seu Perfil Ideal</h2>
+                    <p>Responda algumas perguntas e descubra qual curso do TTE é perfeito para você!</p>
+                    
+                    <div class="teste-container">
+                        <div class="teste-intro" id="testeIntro">
+                            <h3>Quiz Rápido - 5 Perguntas</h3>
+                            <p>Este teste vai ajudar você a identificar suas inclinações e recomendar o melhor caminho para seu desenvolvimento.</p>
+                            <button class="btn-iniciar-teste" onclick="iniciarTeste()">🎯 Iniciar Teste</button>
+                        </div>
+                        
+                        <div class="teste-quiz" id="testeQuiz" style="display: none;">
+                            <div class="quiz-header">
+                                <h3>Pergunta <span id="perguntaAtual">1</span> de 5</h3>
+                                <div class="quiz-progresso">
+                                    <div class="progresso-bar" id="progressoBar"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="pergunta-container">
+                                <h4 id="perguntaTexto">Carregando...</h4>
+                                <div class="opcoes-container" id="opcoesContainer">
+                                    <!-- Opções serão inseridas aqui -->
+                                </div>
+                            </div>
+                            
+                            <div class="quiz-navegacao">
+                                <button class="btn-voltar" id="btnVoltar" onclick="perguntaAnterior()" style="display: none;">← Voltar</button>
+                                <button class="btn-proximo" id="btnProximo" onclick="proximaPergunta()" style="display: none;">Próximo →</button>
+                                <button class="btn-finalizar" id="btnFinalizar" onclick="finalizarTeste()" style="display: none;">Finalizar Teste</button>
+                            </div>
+                        </div>
+                        
+                        <div class="teste-resultados" id="testeResultados" style="display: none;">
+                            <h3>🎉 Seu Resultado</h3>
+                            <div class="resultado-card">
+                                <div class="resultado-icon" id="resultadoIcon">🧠</div>
+                                <h4 id="resultadoTitulo">Perfil: Desenvolvimento Pessoal</h4>
+                                <p id="resultadoDescricao">Você tem um perfil voltado para autoconhecimento e crescimento pessoal. Recomendamos nosso curso de Desenvolvimento Pessoal!</p>
+                                <button class="btn-saber-mais" onclick="saberMaisCurso('desenvolvimento-pessoal')">Saber Mais</button>
+                                <button class="btn-refazer-teste" onclick="refazerTeste()">🔄 Refazer Teste</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- FAQ -->
+                <div class="tte-faq">
+                    <h2>❓ Perguntas Frequentes</h2>
+                    <p>Encontre respostas para as dúvidas mais comuns sobre o TTE.</p>
+                    
+                    <div class="faq-container">
+                        <div class="faq-item">
+                            <div class="faq-pergunta" onclick="toggleFaq(this)">
+                                <h3>Como funciona o processo de inscrição?</h3>
+                                <span class="faq-icon">+</span>
+                            </div>
+                            <div class="faq-resposta">
+                                <p>O processo é simples: primeiro contato, entrevista personalizada, avaliação de perfil, definição do plano de estudos e inscrição. Tudo é feito de forma humanizada e personalizada.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-pergunta" onclick="toggleFaq(this)">
+                                <h3>Os cursos têm certificação reconhecida?</h3>
+                                <span class="faq-icon">+</span>
+                            </div>
+                            <div class="faq-resposta">
+                                <p>Sim! Todos os nossos cursos oferecem certificação reconhecida pelo mercado. Além disso, temos parcerias com empresas e instituições que validam nossos certificados.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-pergunta" onclick="toggleFaq(this)">
+                                <h3>Existe algum pré-requisito para os cursos?</h3>
+                                <span class="faq-icon">+</span>
+                            </div>
+                            <div class="faq-resposta">
+                                <p>Os principais pré-requisitos são: idade mínima de 16 anos, ensino fundamental completo, disposição para aprender e objetivos claros para o futuro.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-pergunta" onclick="toggleFaq(this)">
+                                <h3>Oferecem bolsas de estudo?</h3>
+                                <span class="faq-icon">+</span>
+                            </div>
+                            <div class="faq-resposta">
+                                <p>Sim! O TTE acredita que a educação deve ser acessível a todos. Oferecemos bolsas de estudo para quem realmente precisa, através de um processo de análise socioeconômica.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-pergunta" onclick="toggleFaq(this)">
+                                <h3>Como funciona a mentoria individual?</h3>
+                                <span class="faq-icon">+</span>
+                            </div>
+                            <div class="faq-resposta">
+                                <p>A mentoria individual é um acompanhamento personalizado onde você tem sessões exclusivas com nossos mentores para trabalhar suas necessidades específicas e objetivos.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-pergunta" onclick="toggleFaq(this)">
+                                <h3>Posso cancelar o curso a qualquer momento?</h3>
+                                <span class="faq-icon">+</span>
+                            </div>
+                            <div class="faq-resposta">
+                                <p>Sim, você pode cancelar o curso a qualquer momento. Temos uma política transparente de cancelamento e reembolso, sempre priorizando o bem-estar do aluno.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
             
 
         </main>
         <footer>
             <p>&copy; 2025 TTE - Todos os direitos reservados.</p>
+            <p class="creditos">Desenvolvido por Wallisson Elizeu Candido Da Silva</p>
         </footer>
         <script src="scripts/main.js"></script>
          <div class="menu">
-    <button onclick="location.href='#home'">Início</button>
     <button onclick="abrirSobre()">Sobre</button>
-    <button onclick="location.href='#servicos'">Serviços</button>
+    <button onclick="abrirServicos()">Serviços</button>
     <button onclick="abrirContato()">Contato</button>
   </div>
 
@@ -314,10 +530,227 @@
       </div>
     </div>
   </div>
+
+  <!-- Modal Serviços -->
+  <div id="modalServicos" class="modal">
+    <div class="modal-content servicos-content">
+      <span class="close" onclick="fecharServicos()">&times;</span>
+      <h2>🛠️ Nossos Serviços & Horários</h2>
+      
+      <div class="servicos-grid">
+        <div class="servico-card">
+          <div class="servico-icon">🧠</div>
+          <h3>Desenvolvimento Pessoal</h3>
+          <p>Coaching e mentoria para crescimento pessoal</p>
+          <div class="horario">
+            <span class="dia">Sábados</span>
+            <span class="tempo">09:00 - 12:00</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="desenvolvimento-pessoal-detalhes">
+        <h3>🌟 O que é Desenvolvimento Pessoal no TTE?</h3>
+        <p>O Desenvolvimento Pessoal no TTE vai muito além de simples treinamentos. É uma jornada de autoconhecimento, crescimento e transformação que capacita você a alcançar seu potencial máximo em todas as áreas da vida.</p>
+        
+        <div class="modulos-desenvolvimento">
+          <h4>📚 Módulos do Curso</h4>
+          
+          <div class="modulo-item">
+            <h5>🎯 Autoconhecimento e Propósito</h5>
+            <p>Descubra seus valores, paixões e propósito de vida. Aprenda a alinhar suas ações com seus objetivos mais profundos.</p>
+            <ul>
+              <li>Identificação de valores pessoais</li>
+              <li>Descoberta do propósito de vida</li>
+              <li>Mapeamento de talentos e habilidades</li>
+              <li>Definição de metas pessoais</li>
+            </ul>
+          </div>
+
+          <div class="modulo-item">
+            <h5>💪 Inteligência Emocional</h5>
+            <p>Desenvolva habilidades emocionais essenciais para o sucesso pessoal e profissional.</p>
+            <ul>
+              <li>Autoconsciência emocional</li>
+              <li>Gestão de emoções</li>
+              <li>Empatia e relacionamentos</li>
+              <li>Resiliência e superação</li>
+            </ul>
+          </div>
+
+          <div class="modulo-item">
+            <h5>🗣️ Comunicação Efetiva</h5>
+            <p>Aprenda a se comunicar de forma clara, assertiva e impactante em todos os contextos.</p>
+            <ul>
+              <li>Comunicação verbal e não-verbal</li>
+              <li>Oratória e apresentações</li>
+              <li>Negociação e persuasão</li>
+              <li>Escuta ativa e feedback</li>
+            </ul>
+          </div>
+
+          <div class="modulo-item">
+            <h5>⏰ Produtividade e Gestão do Tempo</h5>
+            <p>Organize sua vida de forma eficiente e maximize seus resultados diários.</p>
+            <ul>
+              <li>Planejamento estratégico pessoal</li>
+              <li>Técnicas de produtividade</li>
+              <li>Gestão de prioridades</li>
+              <li>Eliminação de procrastinação</li>
+            </ul>
+          </div>
+
+          <div class="modulo-item">
+            <h5>🎯 Liderança Pessoal</h5>
+            <p>Desenvolva habilidades de liderança que podem ser aplicadas em qualquer área da vida.</p>
+            <ul>
+              <li>Liderança de si mesmo</li>
+              <li>Tomada de decisões assertivas</li>
+              <li>Responsabilidade e compromisso</li>
+              <li>Influência positiva</li>
+            </ul>
+          </div>
+
+          <div class="modulo-item">
+            <h5>💰 Mentalidade Financeira</h5>
+            <p>Cultive uma relação saudável com o dinheiro e desenvolva inteligência financeira.</p>
+            <ul>
+              <li>Educação financeira básica</li>
+              <li>Planejamento financeiro pessoal</li>
+              <li>Mentalidade de abundância</li>
+              <li>Investimentos para iniciantes</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="metodologia-desenvolvimento">
+          <h4>🎓 Nossa Metodologia</h4>
+          <div class="metodologia-grid">
+            <div class="metodo-item">
+              <div class="metodo-icon">🤝</div>
+              <h5>Coaching Individual</h5>
+              <p>Sessões personalizadas de coaching para trabalhar suas necessidades específicas</p>
+            </div>
+            
+            <div class="metodo-item">
+              <div class="metodo-icon">👥</div>
+              <h5>Grupos de Apoio</h5>
+              <p>Compartilhamento de experiências e aprendizado colaborativo</p>
+            </div>
+            
+            <div class="metodo-item">
+              <div class="metodo-icon">📝</div>
+              <h5>Exercícios Práticos</h5>
+              <p>Atividades e exercícios para aplicar o conhecimento na vida real</p>
+            </div>
+            
+            <div class="metodo-item">
+              <div class="metodo-icon">📊</div>
+              <h5>Acompanhamento</h5>
+              <p>Monitoramento do progresso e ajustes personalizados</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="beneficios-desenvolvimento">
+          <h4>🎁 Benefícios do Desenvolvimento Pessoal</h4>
+          <ul>
+            <li><strong>Autoconfiança:</strong> Aumente sua autoestima e confiança em suas capacidades</li>
+            <li><strong>Clareza:</strong> Tenha mais clareza sobre seus objetivos e direção na vida</li>
+            <li><strong>Relacionamentos:</strong> Melhore seus relacionamentos pessoais e profissionais</li>
+            <li><strong>Produtividade:</strong> Aumente sua eficiência e resultados diários</li>
+            <li><strong>Resiliência:</strong> Desenvolva capacidade de superar desafios</li>
+            <li><strong>Liderança:</strong> Adquira habilidades de liderança aplicáveis em qualquer contexto</li>
+            <li><strong>Equilíbrio:</strong> Encontre equilíbrio entre vida pessoal e profissional</li>
+            <li><strong>Realização:</strong> Alcançe maior satisfação e realização pessoal</li>
+          </ul>
+        </div>
+
+        <div class="depoimentos-desenvolvimento">
+          <h4>💬 Depoimentos de Alunos</h4>
+          <div class="depoimento">
+            <p>"O curso de Desenvolvimento Pessoal no TTE transformou minha vida. Hoje tenho mais clareza sobre meus objetivos e confiança para persegui-los."</p>
+            <span class="autor">- Maria Silva, 28 anos</span>
+          </div>
+          <div class="depoimento">
+            <p>"Aprendi a gerenciar melhor meu tempo e minhas emoções. Isso refletiu diretamente no meu trabalho e relacionamentos."</p>
+            <span class="autor">- João Santos, 35 anos</span>
+          </div>
+        </div>
+
+        <div class="investimento-desenvolvimento">
+          <h4>💰 Investimento</h4>
+          <div class="preco-info">
+            <p><strong>Valor do Curso:</strong> R$ 497,00</p>
+            <p><strong>Forma de Pagamento:</strong> À vista ou em até 6x sem juros</p>
+            <p><strong>Inclui:</strong></p>
+            <ul>
+              <li>12 semanas de curso completo</li>
+              <li>Material didático digital</li>
+              <li>Coaching individual (2 sessões)</li>
+              <li>Certificado de conclusão</li>
+              <li>Acesso à comunidade TTE</li>
+              <li>Suporte durante todo o curso</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="horarios-gerais">
+        <h3>🕐 Horários Gerais de Atendimento</h3>
+        <div class="horario-semana">
+          <div class="dia-semana">
+            <span class="dia-nome">Segunda</span>
+            <span class="horario-dia">08:00 - 22:00</span>
+          </div>
+          <div class="dia-semana">
+            <span class="dia-nome">Terça</span>
+            <span class="horario-dia">08:00 - 22:00</span>
+          </div>
+          <div class="dia-semana">
+            <span class="dia-nome">Quarta</span>
+            <span class="horario-dia">08:00 - 22:00</span>
+          </div>
+          <div class="dia-semana">
+            <span class="dia-nome">Quinta</span>
+            <span class="horario-dia">08:00 - 22:00</span>
+          </div>
+          <div class="dia-semana">
+            <span class="dia-nome">Sexta</span>
+            <span class="horario-dia">08:00 - 22:00</span>
+          </div>
+          <div class="dia-semana">
+            <span class="dia-nome">Sábado</span>
+            <span class="horario-dia">09:00 - 18:00</span>
+          </div>
+          <div class="dia-semana">
+            <span class="dia-nome">Domingo</span>
+            <span class="horario-dia">Fechado</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-adicional">
+        <h3>ℹ️ Informações Importantes</h3>
+        <ul>
+          <li>📞 <strong>Agendamento:</strong> Entre em contato para agendar sua aula</li>
+          <li>👥 <strong>Turmas:</strong> Máximo de 15 alunos por turma</li>
+          <li>💻 <strong>Online:</strong> Aulas presenciais e online disponíveis</li>
+          <li>📚 <strong>Material:</strong> Todo material didático incluso</li>
+          <li>🎓 <strong>Certificado:</strong> Certificação reconhecida pelo mercado</li>
+        </ul>
+      </div>
+    </div>
+  </div>
             </section>
             
           
                 
+
+  <!-- Botão Voltar ao Topo -->
+  <button id="voltarTopo" class="voltar-topo" onclick="voltarAoTopo()">
+    ↑
+  </button>
 
     </body>
 </html>
