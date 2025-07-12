@@ -92,6 +92,7 @@ section p {
     gap: 0.8rem;
     z-index: 1001;
     pointer-events: auto;
+    touch-action: manipulation;
 }
 
 .menu button {
@@ -111,6 +112,10 @@ section p {
     user-select: none;
     position: relative;
     z-index: 1003;
+    pointer-events: auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .menu button:hover {
@@ -131,6 +136,10 @@ section p {
         min-width: 80px;
         padding: 0.5rem 0.8rem;
         font-size: 0.8rem;
+        pointer-events: auto !important;
+        cursor: pointer !important;
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
     }
     
     .menu button:active {
@@ -143,7 +152,50 @@ section p {
         min-width: 70px;
         padding: 0.4rem 0.6rem;
         font-size: 0.75rem;
+        pointer-events: auto !important;
+        cursor: pointer !important;
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
     }
+}
+
+/* CSS específico para dispositivos touch */
+@media (hover: none) and (pointer: coarse) {
+    .menu button {
+        min-height: 44px;
+        min-width: 44px;
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+        pointer-events: auto !important;
+        cursor: pointer !important;
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+    }
+    
+    .menu button:active {
+        transform: scale(0.9);
+        background: linear-gradient(135deg, #764ba2, #667eea);
+    }
+}
+
+/* Garantir que os botões sejam sempre clicáveis */
+.menu button {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+/* Forçar interatividade em todos os dispositivos */
+.menu button:hover,
+.menu button:focus,
+.menu button:active {
+    pointer-events: auto !important;
+    cursor: pointer !important;
 }
 
 /* Footer */
